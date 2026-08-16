@@ -6,7 +6,7 @@ class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
   homepage "https://github.com/alsaadii98/cool-docker-commands"
   url "https://github.com/alsaadii98/cool-docker-commands/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "REPLACED_ON_RELEASE"
+  sha256 "7f5ea846b1d9c600cc0904d635542276f924c98052700b6250e6cacec8618c22"
   license "MIT"
   head "https://github.com/alsaadii98/cool-docker-commands.git", branch: "main"
 
