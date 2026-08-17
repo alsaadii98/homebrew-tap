@@ -6,29 +6,29 @@
 class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
   homepage "https://github.com/alsaadii98/cool-docker-commands"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
   head "https://github.com/alsaadii98/cool-docker-commands.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.0/dok-0.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "57f5f7255871b48b2d268771667e0eee3f97606afdaaa3ee9db38b4d0ec710d1"
+      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.1/dok-0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "b9da4c4418be4dd596bfc840d9002cbe2d531eeb7fcc7c9fe9e1ac97e35c507e"
     end
     on_intel do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.0/dok-0.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "4dc38c9899071cc9c6705b5987092d82aa2eb2cdb5ecc98f3ad722df210b9fb2"
+      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.1/dok-0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "3a5063acc92e4160f0b53f63b2afec331775d2c7fa58abe9547b93b526b2a110"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.0/dok-0.1.0-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "8c0d131596f2e63e11b537d08cabedcdb7df1001c0655ca04512eced3a3a3107"
+      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.1/dok-0.1.1-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "4b7f5420952b7a01b73e6b9d0ac2a64086b99e72736135d80fe6ad334368d7db"
     end
     on_intel do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.0/dok-0.1.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "0a1df09b5ed63331a835ba3c7d7047d46ede0db90681a8896480ccb5a4aafb56"
+      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.1/dok-0.1.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "75ce92985396aa577fc0961dc257b4cfbdf2a955ef818403c3d25c3cb2c78745"
     end
   end
 
