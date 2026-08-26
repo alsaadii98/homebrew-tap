@@ -5,30 +5,30 @@
 # Every tagged release regenerates this file with fresh checksums.
 class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
-  homepage "https://github.com/alsaadii98/cool-docker-commands"
-  version "0.1.4"
+  homepage "https://github.com/alsaadii98/dok"
+  version "0.1.5"
   license "MIT"
-  head "https://github.com/alsaadii98/cool-docker-commands.git", branch: "main"
+  head "https://github.com/alsaadii98/dok.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.4/dok-0.1.4-aarch64-apple-darwin.tar.gz"
-      sha256 "7d6e182442438723f01f8cc3ad3b3457fb4fc667ef968497dd73643bf47329b4"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.1.5/dok-0.1.5-aarch64-apple-darwin.tar.gz"
+      sha256 "c164d3ad63a6535bea357014cd182257110835f5e44ba35d096dcb0b9a6b95e1"
     end
     on_intel do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.4/dok-0.1.4-x86_64-apple-darwin.tar.gz"
-      sha256 "d8f06f066b75d51bf55a6fb8bd79bbebbdecddae3ac55726791153b49fc0ff14"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.1.5/dok-0.1.5-x86_64-apple-darwin.tar.gz"
+      sha256 "7a2ce95a0d4d14d13daee1c4c3416d0b161792491825b9a53223996ee95dca3b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.4/dok-0.1.4-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "84e9f656515b43d0918a7466f57c8f335400d9f3a572f02a63cfdc7bdf6df12e"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.1.5/dok-0.1.5-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "5828052122c06384dd06fe06b5c50e039f7d6720926ab516cce9485bd55b7bdc"
     end
     on_intel do
-      url "https://github.com/alsaadii98/cool-docker-commands/releases/download/v0.1.4/dok-0.1.4-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "69a3de3157bd4d7fec36f5eb077feb19f22986470e302721124f71bb99d5c829"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.1.5/dok-0.1.5-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "be83a557f47199a9da473a0e4c629ba853b8c9dbca0ec11abe5da41c9404b8c6"
     end
   end
 
