@@ -6,29 +6,29 @@
 class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
   homepage "https://github.com/alsaadii98/dok"
-  version "0.1.6"
+  version "0.2.0"
   license "MIT"
   head "https://github.com/alsaadii98/dok.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.1.6/dok-0.1.6-aarch64-apple-darwin.tar.gz"
-      sha256 "b24f2401e633a8eea8ac4589e23176664d7af3bb1c00f0448766aa10b71434bb"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.2.0/dok-0.2.0-aarch64-apple-darwin.tar.gz"
+      sha256 "0e60d35a4e1d9df1cb4f98dd5b0754a62b365e5cf4834911d766c44ddde3025b"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.1.6/dok-0.1.6-x86_64-apple-darwin.tar.gz"
-      sha256 "e1e9a334f9bebe143c53dff105441c172267ec9c38414d6eb3eb1db3752d4655"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.2.0/dok-0.2.0-x86_64-apple-darwin.tar.gz"
+      sha256 "91df8108d9568232a8efd54e9096d907ada441c9a4c37856c2235325bef0e86c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.1.6/dok-0.1.6-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "6fbfb9d58a6eabe67892c48afd5d6978154e07476db75492d1e2a4b422a8a982"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.2.0/dok-0.2.0-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "49a94424c2ef5f4cb6c6f035b9f47cb2a9879add491c83356330d5f9bc718539"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.1.6/dok-0.1.6-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "be24f04ee0e8672f1cd742ec2d3378da6f484dc075bed8cf1c8ac7731b1e28bc"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.2.0/dok-0.2.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "dae4feb32d0a6096721f2e4510f35487a11f75200c94bacba291f6bfe2a501c5"
     end
   end
 
@@ -46,6 +46,7 @@ class Dok < Formula
       root = Dir["dok-*"].find { |d| File.directory?(d) } || "."
       bin.install "#{root}/dok"
       doc.install "#{root}/README.md", "#{root}/CHANGELOG.md" if File.exist?("#{root}/README.md")
+      generate_completions_from_executable(bin/"dok", "completions")
     end
   end
 
