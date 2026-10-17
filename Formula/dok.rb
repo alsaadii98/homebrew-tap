@@ -6,29 +6,29 @@
 class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
   homepage "https://github.com/alsaadii98/dok"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
   head "https://github.com/alsaadii98/dok.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.1/dok-0.3.1-aarch64-apple-darwin.tar.gz"
-      sha256 "be629a717115bcc2b4caa1c927acc026ae3e30b0b1e640ef0f0dc19bf7da50e7"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-aarch64-apple-darwin.tar.gz"
+      sha256 "5cfbf78799bb1ac70db7906b616ff454697148ebbe291b1b7c48a3cf0930f093"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.1/dok-0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "8a91275910ecbc3c1634fd162aa4a1c9422b2dd3f59899489f1c263423764638"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-x86_64-apple-darwin.tar.gz"
+      sha256 "5fe4a1abd368df08c121573cc89a7ed6696f0e6b56e3662f70849f4b76bf9694"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.1/dok-0.3.1-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "8f1e7fc3eba61c7c34fb0376f1a7f8b67505ebaa1f65579b915b1141ebc6335c"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "8e929aeffd05e862103ccbb0aded1aca3f08f233693efff27a0b0b06276725b0"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.1/dok-0.3.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "7ecc070d7a6d81a25deb66e2fbba54c4cd2dfe0e351995d39904b2ad85170342"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "879a89277f7979432585413f1ae3f282f25e6db90fa376169b7d2adc48cb2bbc"
     end
   end
 
@@ -46,8 +46,13 @@ class Dok < Formula
       root = Dir["dok-*"].find { |d| File.directory?(d) } || "."
       bin.install "#{root}/dok"
       doc.install "#{root}/README.md", "#{root}/CHANGELOG.md" if File.exist?("#{root}/README.md")
-      generate_completions_from_executable(bin/"dok", "completions")
     end
+
+    # Both from the installed binary, so a --HEAD build gets them too.
+    generate_completions_from_executable(bin/"dok", "completions")
+    # dok(1) and one dok-<command>(1) per command.
+    system bin/"dok", "man", "--out-dir", buildpath/"man"
+    man1.install Dir[buildpath/"man/*.1"]
   end
 
   test do
