@@ -6,29 +6,29 @@
 class Dok < Formula
   desc "Docker output, made readable - what eza is to ls"
   homepage "https://github.com/alsaadii98/dok"
-  version "0.3.2"
+  version "0.3.3"
   license "MIT"
   head "https://github.com/alsaadii98/dok.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-aarch64-apple-darwin.tar.gz"
-      sha256 "5cfbf78799bb1ac70db7906b616ff454697148ebbe291b1b7c48a3cf0930f093"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.3/dok-0.3.3-aarch64-apple-darwin.tar.gz"
+      sha256 "29a900ad16f945dcb371aed8116299df7759c8f6bfb9361c807f7b73997b25d2"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-x86_64-apple-darwin.tar.gz"
-      sha256 "5fe4a1abd368df08c121573cc89a7ed6696f0e6b56e3662f70849f4b76bf9694"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.3/dok-0.3.3-x86_64-apple-darwin.tar.gz"
+      sha256 "9abe09f94152b66a35545413a6a7cae99b3debd576583c029de18ec9ec223659"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "8e929aeffd05e862103ccbb0aded1aca3f08f233693efff27a0b0b06276725b0"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.3/dok-0.3.3-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "a805c74b39a1698190b7d6de7ee9c91d9d00033d6cda5c67b7be1c1976de243f"
     end
     on_intel do
-      url "https://github.com/alsaadii98/dok/releases/download/v0.3.2/dok-0.3.2-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "879a89277f7979432585413f1ae3f282f25e6db90fa376169b7d2adc48cb2bbc"
+      url "https://github.com/alsaadii98/dok/releases/download/v0.3.3/dok-0.3.3-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "1b180a27af094957adfb47e0453c57af38389cd98f5d78e1c2f1da9fba4ff241"
     end
   end
 
